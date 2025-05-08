@@ -1,0 +1,29 @@
+{
+    "name": "Python & Django Backend",
+    "image": "mcr.microsoft.com/devcontainers/python:3.13",
+    "postCreateCommand": "git config --global user.email 'steve.delperdang@gmail.com'; git config --global user.name 'delperdang'; git config --global init.defaultBranch main; python -m pip install --upgrade pip; pip install django pythonanywhere-helper black flake8",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "batisteo.vscode-django",
+                "ms-python.black-formatter",
+                "ms-python.flake8"
+            ],
+            "settings": {
+                "[python]": {
+                    "editor.defaultFormatter": "ms-python.black-formatter",
+                    "editor.formatOnSave": true,
+                    "editor.codeActionsOnSave": {
+                        "source.organizeImports": "explicit"
+                    }
+                },
+                "python.linting.flake8Enabled": true,
+                "python.linting.pylintEnabled": false
+            }
+        }
+    },
+    "forwardPorts": [8000],
+    "remoteUser": "vscode"
+}
