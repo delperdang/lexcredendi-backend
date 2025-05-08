@@ -2,6 +2,7 @@
     "name": "Python & Django Backend",
     "image": "mcr.microsoft.com/devcontainers/python:3.13",
     "postCreateCommand": "git config --global user.email 'steve.delperdang@gmail.com'; git config --global user.name 'delperdang'; git config --global init.defaultBranch main; python -m pip install --upgrade pip; pip install django pythonanywhere-helper black flake8",
+    "runArgs": ["--env-file", ".devcontainer/dev.env"],
     "customizations": {
         "vscode": {
             "extensions": [
