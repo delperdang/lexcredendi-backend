@@ -3,8 +3,6 @@ from django.db.models import Q
 from .models import Record
 from .bible import Bible
 
-APP_NAME = "apologetics"
-
 
 def serialize_record(record, linkify_text=True):
     """Helper function to serialize a Record object to a dictionary."""
