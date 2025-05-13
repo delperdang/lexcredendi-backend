@@ -2,8 +2,8 @@ from django.http import JsonResponse
 from django.db.models import Q
 from django.utils import timezone
 from .models import Record
-from .podcast import Podcast
-from .bible import Bible
+from home.podcast import Podcast
+from home.bible import Bible
 
 
 def serialize_bible_record(

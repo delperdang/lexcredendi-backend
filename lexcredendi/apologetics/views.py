@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from django.db.models import Q
 from .models import Record
-from .bible import Bible
+from home.bible import Bible
 
 
 def serialize_record(record, linkify_text=True):

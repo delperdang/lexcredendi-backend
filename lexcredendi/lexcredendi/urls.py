@@ -11,7 +11,6 @@ api_v1_urlpatterns = [
     path("catechism/", include("catechism.urls")),
     path("doctrine/", include("doctrine.urls")),
     path("litcal/", include("litcal.urls")),
-    path("meditation/", include("meditation.urls")),
     path("prayer/", include("prayer.urls")),
     path("readings/", include("readings.urls")),
 ]

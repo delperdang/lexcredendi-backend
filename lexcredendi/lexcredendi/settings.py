@@ -4,9 +4,7 @@ from import_export.formats.base_formats import CSV
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ.get(
-    "django-insecure-6%ms(+n!m$d&e+o-4+$s7p^8+b##8yegt34g-tr)apxld@y=xd"
-)
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 
 DEBUG = os.environ.get("DJANGO_DEBUG", "False").lower() in (
     "true",
@@ -35,7 +33,6 @@ INSTALLED_APPS = [
     "catechism.apps.CatechismConfig",
     "doctrine.apps.DoctrineConfig",
     "litcal.apps.LitcalConfig",
-    "meditation.apps.MeditationConfig",
     "prayer.apps.PrayerConfig",
     "readings.apps.ReadingsConfig",
 ]
