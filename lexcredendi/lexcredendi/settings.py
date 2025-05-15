@@ -85,7 +85,7 @@ DB_PORT = os.environ.get("DB_PORT")
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "lexcredendi_db",
+        "NAME": "delperdang$default",
         "USER": "delperdang",
         "PASSWORD": DB_PASSWORD,
         "HOST": "delperdang.mysql.pythonanywhere-services.com",
