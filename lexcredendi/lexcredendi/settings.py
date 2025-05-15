@@ -14,7 +14,12 @@ DEBUG = os.environ.get("DJANGO_DEBUG", "False").lower() in (
     "yes",
 )
 
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(",")
+ALLOWED_HOSTS = [
+    "delperdang.pythonanywhere.com",
+    "https://delperdang.github.io",
+    "http://localhost",
+    "http://127.0.0.1",
+]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -80,11 +85,11 @@ DB_PORT = os.environ.get("DB_PORT")
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": DB_NAME,
-        "USER": DB_USER,
+        "NAME": "lexcredendi_db",
+        "USER": "delperdang",
         "PASSWORD": DB_PASSWORD,
-        "HOST": DB_HOST,
-        "PORT": DB_PORT,
+        "HOST": "delperdang.mysql.pythonanywhere-services.com",
+        "PORT": "3306",
         "OPTIONS": {
             "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
             "charset": "utf8mb4",
